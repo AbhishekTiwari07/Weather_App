@@ -1,0 +1,37 @@
+body{
+    width:100%;
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+    font-family:arial;
+}
+header{
+    font-size: 64px;
+    font-weight:bold;
+    margin:50px 0 0 0;
+}
+nav{
+    height:24px;
+    font-size: 20px;
+    margin:30px auto;
+}
+a{
+    text-decoration: none;
+    color:gray;
+    margin:0 20px;
+}
+a:hover{
+    color:black;
+}
+
+footer {
+   border-top:solid gray 1px;
+   font-size: 20px;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   padding:10px 0;
+   background-color: gray;
+}
