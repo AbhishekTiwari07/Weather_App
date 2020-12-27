@@ -3,7 +3,9 @@ const express = require('express')
 const hbs = require('hbs')
 const location = require('./geocoding.js')
 const forecast = require('./weather.js')
+
 const app = express()
+const port = process.env.PORT || 3000
 
 const dirViews = path.join(__dirname,'../template/views')
 const dirPartials = path.join(__dirname,'../template/partials')
@@ -15,6 +17,7 @@ app.set('view engine', 'hbs')
 hbs.registerPartials(dirPartials)
 
 app.use(express.static(dirPublic))
+
 
 app.get('',(req,res)=>{
     res.render('index',{
@@ -68,9 +71,9 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,(error)=>{
+app.listen(port,(error)=>{
     if(error)
         console.log(error)
     else
-        console.log('Server is up on port 3000')
+        console.log('Server is up on port '+port)
 })
